@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Daniel Hadar Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@486&display=swap" rel="stylesheet">
+	<link rel="icon" src="headfree.png">
+
+  </head>
+<body onload="homeNow()">
+
+<audio id="deixa">
+	<source src="deixa.mp3" type="audio/mpeg">
+</audio>
+<audio id="chain">
+	<source src="MY CHAIN W_ TEC.mp3" type="audio/mpeg">
+</audio>
+<audio id="ultimate">
+	<source src="Ultimate.mp3" type="audio/mpeg">
+</audio>
+<audio id="bamba">
+	<source src="Sheck Wes - Mo Bamba.mp3" type="audio/mpeg">
+</audio>
+<audio id="blue">
+	<source src="Mr. Blue Sky.mp3" type="audio/mpeg">
+</audio>
+<audio id="harlem">
+	<source src="harlem-shake.mp3" type="audio/mpeg">
+</audio>
+
+		<div class="outline-head">
+		<img src="LOGO.png" class="logo" onclick="homeNow()"></src>
+		<img src="new-philosophie.png" class="new-philosophie"></div>
+		 
+		<div class="navigation">
+			<ul>
+			<li>
+				<a href="#" onclick="homeNow()">
+					<div class="indicator"></div>
+					<span class="icon" id="home">
+						<ion-icon name="home-outline"></ion-icon>
+					</span>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" type="button" onmouseover="skipIn()" onmouseout="fadeSkipOut()" id="music-note">
+					<div class="indicator"></div>
+					<div id="skipdown" class="skipdown" >
+						<button id="previousButton"><ion-icon name="play-skip-back"></ion-icon></button>
+						<button type="button" id="playButton"><ion-icon name="play"></ion-icon></button>
+						<button id="nextButton"><ion-icon name="play-skip-forward"></ion-icon></button>
+					</div>
+					<span class="icon" >
+						<ion-icon name="musical-notes-outline"></ion-icon>
+					</span>
+					<span class="text" id="playpause">Music Control</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="contactNow()">
+					<div class="indicator"></div>
+					<span class="icon" id="contact">
+						<ion-icon name="call-outline"></ion-icon>
+					</span>
+					<span class="text">Contact</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="resumeNow()">
+					<div class="indicator"></div>
+					<span class="icon" id="resume">
+						<ion-icon name="document-outline"></ion-icon>
+					</span>
+					<span class="text">Resume</span>
+				</a>
+			</li>
+			<li>
+				<a href="/Modal Calendar/calendar.html" onclick="personalNow()">
+					<div class="indicator"></div>
+					<span class="icon" id="personal">
+						<ion-icon name="person-outline"></ion-icon>
+					</span>
+					<span class="text">Personal Page</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" onmouseover="settingsIn()" onmouseout="fadeSettingsOut()" class="settings">
+					<div class="indicator"></div>
+					<div id="dropdown" class="dropdown" >
+						<!-- Next Step: Make each theme changer a div, and then put a border radius and animation so they drop in as circle (border-radius: 50px) one after the other, and ranging in opacity (hover should make the opacity 1)-->
+						<div id="accent-setting">
+						<input type="color" id="secondary-colorpicker" value="#d35555">
+						<p>Accent Color</p>
+						<button id="changeSecondaryTheme" onclick="changeSecondaryTheme()">Change</button>
+						<button id="revertSecondaryTheme" onclick="revertSecondaryTheme()">Revert</button>
+						</div>
+
+						<div id="background-setting">
+						<input type="color" id="primary-colorpicker" value="#000">
+						<p>Background</p>
+						<button id="changePrimaryTheme" onclick="changePrimaryTheme()">Change</button>
+						<button id="revertPrimaryTheme" onclick="revertPrimaryTheme()">Revert</button>
+						</div>
+
+						<div id="active-setting">
+						<input type="color" id="tertiary-colorpicker" value="#189521">
+						<p>Active Color</p>
+						<button id="changeTertiaryTheme" onclick="changeActiveTheme()">Change</button>
+						<button id="revertTertiaryTheme" onclick="revertActiveTheme()">Revert</button>
+						</div>
+					</div>
+					<span class="icon" id="settings">
+						<ion-icon name="settings-outline"></ion-icon>
+					</span>
+					<span class="text">Tweak Settings</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+		</div>
+		
+		<!--<div class="headfree" onclick="introduce()">
+			<div id="intro">
+				<h2>Meet Daniel!</h2>
+				<h6>A New Developer</h6>
+				<p>*Click to Hide/Show*</p>
+			</div>
+		</div>-->
+		<div class="bg-image">
+			<div class='tri-1'></div>
+			<div class='tri-2'></div>
+		</div>
+
+		<!-- Body Of Home Page: Big Home Icon top right, with description + blur of the bg-image -->
+		<div class="bottom-content">
+		<div id="homePage">
+			<div class="large-icon">
+				<span>
+					<ion-icon name="home-outline"></ion-icon>
+				</span>
+			</div>
+			<div class="bottom-title">
+				<h1>Welcome</h1>
+				<audio id="foobar" src="deixa.mp3" preload="auto" > 
+			</div>
+			<div class="bottom-body">
+				<h2>This is where I show you what I can do</h2>
+				<p>I am a self-taught developer, here are some of my skills</p>
+			</div>
+		</div>
+
+		<div id="contactPage">	
+			<div class="large-icon">
+				<span>
+					<ion-icon name="call-outline"></ion-icon>
+				</span>
+			</div>
+			<div class="bottom-title">
+				<h1>Contact Me</h1>
+			</div>
+			<div class="bottom-body">
+				<h2>This is where I show you what I can do</h2>
+				<p>email: danielhadar2022@gmail.com</p>
+				<p>phone: (415) - 200 - 7780</p>
+				<p>instagram: danielhadar9</p>
+			</div>
+		</div>
+
+		<div id="resumePage">	
+			<div class="large-icon">
+				<span>
+					<ion-icon name="document-outline"></ion-icon>
+				</span>
+			</div>
+			<div class="bottom-title">
+				<h1>Resume</h1>
+			</div>
+			<div class="bottom-body">
+				<ul>
+					<h2>WORK EXPERIENCE and CERTIFICATIONS</h2>
+					<li>Red Cross Lifeguard Certified (December, 2021)</li>
+					<li>CPR and First Aid Certified (December, 2021)</li>
+					<li>Coach at Sleepy Hollow Aquatics (SHAQ) (All ages)</li>
+					<li>Coach Water Polo private lessons and clinics for groups of players</li>
+					<li>Academic Tutor</li>
+
+				</ul>
+			</div>
+		</div>
+		</div>
+
+		<script src=script.js></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

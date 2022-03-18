@@ -1,0 +1,461 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Inter", sans-serif; 
+	box-sizing: border-box;
+	
+}
+:root{
+	--clr: #d35555;
+	--clrB: #000;
+	--clrA: #189521;
+}
+body, html{
+	justify-content: center;
+	align-items: center;
+	background: var(--clrB);
+	min-height: 30vh;
+	height: 100%;
+}
+.logo{
+	position: absolute;
+	height: 5em;
+	top: 5px;
+  left: 20px;
+	opacity: 1;
+	cursor: pointer;
+
+}
+
+.logo:hover{
+	position: absolute;
+	height: 5em;
+	top: 5px;
+  left: 20px;
+	opacity: 1;
+	cursor: pointer;
+	box-shadow: 5px 5px 10px var(--clrA);
+
+}
+
+
+
+
+.new-philosophie{
+	position: absolute;
+	height: 7.5vh;
+	top: 5vh;
+	left: 5vw;
+	opacity: 0;
+}
+
+
+.outline-head{
+	display: block;
+	background: black;
+	height: 100px;
+	align-items: center;
+}
+
+.navigation{
+	position: absolute;
+  border: 1px solid var(--clrB);
+	top: 20px;
+  right: 10px;
+	width: 50vw;
+	height: 70px;
+	background: var(--clrB);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	z-index: 3;
+}
+.navigation ul{
+	display: flex;
+	width: 100vw;
+}
+
+.navigation ul li{
+	display: flex;
+	list-style: none;
+	float: right;
+	width: 10vw;
+	height: 70px;
+	z-index: 1;
+}
+.navigation ul li a{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+}
+.navigation ul li a .icon{
+	position: relative;
+	display: block;
+	line-height: 25px;
+	font-size: 2em;
+	text-align: center;
+	transition: 0.5s;
+	color: var(--clr);
+}
+.navigation ul li:hover a .icon{
+	transform: translateY(-15px);
+	color: var(--clrA);
+	cursor: pointer;
+}
+.navigation ul li a .text{
+	position: absolute;
+	color: var(--clr);
+	font-weight: 40;
+	font-size: 1em;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+	opacity: 0;
+	transform: translateY(0px);
+}
+
+.navigation ul li:hover a .text{
+	position: absolute;
+	color: white;
+	font-weight: 40;
+	font-size: 1em;
+	letter-spacing: 0.05em;
+	opacity: 1;
+	transform: translateY(20px);
+}
+
+.navigation ul li:active a .text{
+	color: var(--clr);
+	transition: 0.4s;
+}
+
+
+.navigation ul li a .indicator{
+	opacity: 0;
+	content: '';
+	position: absolute;
+	top: 10%;
+	width: 20px;
+	height: 20px;
+	background: var(--clr);
+	border-top-left-radius: 20px;
+	box-shadow: 0px -10px 0 0 var(--clrB);
+	transition: 0.5s;
+}
+
+
+.navigation ul li:hover a .indicator{
+	opacity: 1;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background: #cccccc;
+	border-radius: 50%;
+	border: 6px solid var(--clr);
+	transform: translateY(-20px);
+}
+
+
+
+
+
+
+
+.bg-image {
+  /* The image used */
+  background-image: url("sanfrancisco.jpg");
+  
+  /* Add the blur effect */ 
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+	
+  
+  /* Full height */
+  height: 50%; 
+	border: none;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	z-index:-1;
+	box-shadow: inset 0 0 10px 2px #000000;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+	/* 
+	background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.6); 
+	border: 3px solid #f1f1f1;
+	*/
+  display: block;
+	color: white;
+	text-shadow: 1vh 3vh #ff0000;
+  font-weight: bold;
+	font-size: 20vh;
+  position: absolute;
+	top: 20%;
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+	font-family: Lato, sans;
+}
+
+.headfree {
+  /* The image used */
+  background-image: url("headfree.png");
+  opacity: 1;
+	position: absolute;
+	width: 20vh;
+	height: 20vh;
+	left: 45%;
+	top: 35%;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30vh;
+	z-index:3;
+	box-shadow: 0.5vh 0.5vh 1vh #383838;
+	transition: 0.7s;
+}
+
+.headfree:hover{
+  /* The image used */
+  background-image: url("headfree.png");
+	padding: 0px;
+	background-position: center;
+  background-repeat: no-repeat;
+	background-size: 40vh;
+	z-index:3;
+	width: 25vh;
+	height: 25vh;
+	left: 40%;
+	top: 30%;
+	box-shadow: 0vh 5vh 5vh #2e2e2e;
+	
+}
+
+#intro{
+	position: absolute;
+	color: var(--clrB);
+	font-family: 'Inter', sans-serif;
+	float: right;
+	top: -25vh;
+	transition: 0.5s;
+	text-shadow: 0.75vh 1.5vh 0.5vh var(--clr);
+  font-weight: 486;
+	font-size: 10vh;
+	width: 60vh;
+	height: 150vh;
+	left: 150%;
+	top: -90%;
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 2;
+}
+
+#intro p{
+	display: block;
+	font-size: 5vh;
+	color: black;
+}
+
+
+.headfree:hover + .bg-image {
+	transition: 0.5s;
+	background-image: url("sanfrancisco-dark.jpg");
+	filter: blur(4px);
+	-webkit-filter: blur(4px);
+}
+
+.headfree:hover > #intro {
+	color: white;
+	opacity: 1;
+}
+
+.headfree:hover > #intro p{
+	color: white;
+	opacity: 1;
+}
+
+
+
+.tri-1{
+	clip-path: polygon(25% 0%, 0 0, 0 100%);
+	background-color: var(--clrB);
+	height: 75%;
+	position: absolute;
+	top: 0%;
+	float: left;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.tri-2{
+	clip-path: polygon(25% 100%, 0 0, 0 100%);
+	background-color: var(--clr);
+	height: 75%;
+	position: absolute;
+	top: 25%;
+	float: left;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.bottom-content{
+
+	color: white;
+}
+
+.large-icon{
+	color: var(--clrA);
+	font-size: 6em;
+	padding: 3vw;
+}
+
+.bottom-title{
+	position: absolute;
+	color: white;
+	right: 1em;
+	font-size: 3em;
+	padding: 3vw 10vw;
+	width: 70vw;
+	top: 60%;
+}
+
+.bottom-body{
+	color: white;
+	font-size: 2em;
+	padding: 3vw;
+	float: right;
+	width: 70vw;
+	background-color: var(--clr);
+}
+
+#homePage{
+	display: block;
+}
+
+#contactPage{
+	display: none;
+}
+
+#resumePage{
+	display: none;
+}
+
+#resumePage ul li{
+	margin-left: 1em;
+	list-style: none;
+}
+
+.navigation ul li a .dropdown{
+	opacity: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column wrap;
+	top: 80px;
+	float: none;
+	position: absolute;
+	transition: 1.5s;
+	width: 100px;
+	height: 250px;
+	z-index: 4;
+	padding: 6px;
+	
+	background: none;
+	align-items: center;
+	
+}
+
+.navigation ul li a .dropdown div{
+	border-radius: 40%;
+	padding: 2px;
+	border: 1px solid white;
+	opacity: 1;
+	background-color: var(--clrA);
+	transition: 0.5s;
+}
+
+.navigation ul li a .dropdown input{
+	position: bottom;
+	bottom: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 20%;
+
+}
+
+.navigation ul li a .dropdown p{
+	display: block;
+	color: white;
+	font-size: 10px;
+	font-weight: 400;
+	font-family: "Inter", sans-serif;
+}
+
+.navigation ul li a .dropdown button{
+	border: 1px solid white;
+	color: white;
+	background-color: var(--clrB);/* change color back to var(--clrB)*/
+	font-family: "Inter", sans-serif;
+	width: 30px;
+	height: 20px;
+	font-size: 7px;
+	border-radius: 20%;
+	
+}
+
+.navigation ul li a .skipdown{
+	opacity: 0;
+	display: flex;
+	justify-content: space-between;
+	top: 4rem;
+	position: absolute;
+	transition: 1.5s;
+	width: 7rem;
+	height: 3rem;
+	z-index: 4;
+	padding: 6px;
+	background: none;
+	align-items: center;
+	
+}
+
+.navigation ul li a .skipdown p{
+	display: block;
+	margin: auto 0;
+	color: white;
+	font-size: 2rem;
+	text-shadow: 1rem 1rem 1rem black;
+	font-weight: bolder;
+	font-family: "Inter", sans-serif;
+}
+
+.navigation ul li a .skipdown div{
+	border: none;
+	opacity: 1;
+	background-color: none; /*var(--clrA)*/
+	transition: 0.5s;
+	
+}
+
+.navigation ul li a .skipdown button{
+	border: 1px solid white;
+	color: white;
+	background-color: var(--clrB);/* change color back to var(--clrB)*/
+	font-family: "Inter", sans-serif;
+	width: 2rem;
+	height: 2rem;
+	font-size: 1rem;
+	border-radius: 100%;
+	box-shadow: 1rem 1rem 1rem black;
+}
+
+
