@@ -7,7 +7,7 @@
 }
 :root{
 	--clr: #d35555;
-	--clrB: #000;
+	--clrB: rgb(65, 65, 65);
 	--clrA: #189521;
 }
 body, html{
@@ -24,6 +24,7 @@ body, html{
   left: 20px;
 	opacity: 1;
 	cursor: pointer;
+	border-radius: 1rem;
 
 }
 
@@ -34,7 +35,7 @@ body, html{
   left: 20px;
 	opacity: 1;
 	cursor: pointer;
-	box-shadow: 5px 5px 10px var(--clrA);
+	box-shadow: 5px 5px 10px black;
 
 }
 
@@ -52,7 +53,7 @@ body, html{
 
 .outline-head{
 	display: block;
-	background: black;
+	background: var(--clrB);
 	height: 100px;
 	align-items: center;
 }
