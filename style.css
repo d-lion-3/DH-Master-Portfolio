@@ -6,23 +6,26 @@
 	
 }
 :root{
-	--clr: #d35555;
-	--clrB: rgb(65, 65, 65);
+	--clr: #ffffff;
+	--clrO: #d35555;
+	--clrB: rgb(0, 0, 0);
 	--clrA: #189521;
 }
 body, html{
 	justify-content: center;
 	align-items: center;
-	background: var(--clrB);
+	background: #0f797b; /*url("Modal Calendar/blackliquid.gif");*/
+	backrgound-size: original;
 	min-height: 30vh;
 	height: 100%;
 }
 .logo{
 	position: absolute;
 	height: 5em;
+	width: 4em;
 	top: 5px;
   left: 20px;
-	opacity: 1;
+	opacity: 0;
 	cursor: pointer;
 	border-radius: 1rem;
 
@@ -33,39 +36,35 @@ body, html{
 	height: 5em;
 	top: 5px;
   left: 20px;
-	opacity: 1;
+	opacity: 0;
 	cursor: pointer;
-	box-shadow: 5px 5px 10px black;
 
 }
 
 
-
-
-.new-philosophie{
+.kadima{
 	position: absolute;
-	height: 7.5vh;
-	top: 5vh;
-	left: 5vw;
-	opacity: 0;
+	opacity: 1;
+	height: 10rem;
+	top: -2rem;
 }
 
 
 .outline-head{
 	display: block;
-	background: var(--clrB);
-	height: 100px;
+	background: none;
+	height: 5rem;
 	align-items: center;
 }
 
 .navigation{
 	position: absolute;
-  border: 1px solid var(--clrB);
-	top: 20px;
-  right: 10px;
-	width: 50vw;
+  border: none;
+	top: 2vh;
+  right: 2vw;
+	width: 40vw;
 	height: 70px;
-	background: var(--clrB);
+	background: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -74,7 +73,7 @@ body, html{
 }
 .navigation ul{
 	display: flex;
-	width: 100vw;
+	width: 40vw;
 }
 
 .navigation ul li{
@@ -93,13 +92,13 @@ body, html{
 	flex-direction: column;
 	width: 100%;
 	text-align: center;
-	font-weight: 500;
+	font-weight: bolder;
 }
 .navigation ul li a .icon{
 	position: relative;
 	display: block;
 	line-height: 25px;
-	font-size: 2em;
+	font-size: 1em;
 	text-align: center;
 	transition: 0.5s;
 	color: var(--clr);
@@ -161,200 +160,6 @@ body, html{
 	transform: translateY(-20px);
 }
 
-
-
-
-
-
-
-.bg-image {
-  /* The image used */
-  background-image: url("sanfrancisco.jpg");
-  
-  /* Add the blur effect */ 
-  filter: blur(0px);
-  -webkit-filter: blur(0px);
-	
-  
-  /* Full height */
-  height: 50%; 
-	border: none;
-  
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-	z-index:-1;
-	box-shadow: inset 0 0 10px 2px #000000;
-}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-	/* 
-	background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.6); 
-	border: 3px solid #f1f1f1;
-	*/
-  display: block;
-	color: white;
-	text-shadow: 1vh 3vh #ff0000;
-  font-weight: bold;
-	font-size: 20vh;
-  position: absolute;
-	top: 20%;
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-	font-family: Lato, sans;
-}
-
-.headfree {
-  /* The image used */
-  background-image: url("headfree.png");
-  opacity: 1;
-	position: absolute;
-	width: 20vh;
-	height: 20vh;
-	left: 45%;
-	top: 35%;
-	background-position: center;
-  background-repeat: no-repeat;
-  background-size: 30vh;
-	z-index:3;
-	box-shadow: 0.5vh 0.5vh 1vh #383838;
-	transition: 0.7s;
-}
-
-.headfree:hover{
-  /* The image used */
-  background-image: url("headfree.png");
-	padding: 0px;
-	background-position: center;
-  background-repeat: no-repeat;
-	background-size: 40vh;
-	z-index:3;
-	width: 25vh;
-	height: 25vh;
-	left: 40%;
-	top: 30%;
-	box-shadow: 0vh 5vh 5vh #2e2e2e;
-	
-}
-
-#intro{
-	position: absolute;
-	color: var(--clrB);
-	font-family: 'Inter', sans-serif;
-	float: right;
-	top: -25vh;
-	transition: 0.5s;
-	text-shadow: 0.75vh 1.5vh 0.5vh var(--clr);
-  font-weight: 486;
-	font-size: 10vh;
-	width: 60vh;
-	height: 150vh;
-	left: 150%;
-	top: -90%;
-	transition: 0.5s;
-	opacity: 0;
-	z-index: 2;
-}
-
-#intro p{
-	display: block;
-	font-size: 5vh;
-	color: black;
-}
-
-
-.headfree:hover + .bg-image {
-	transition: 0.5s;
-	background-image: url("sanfrancisco-dark.jpg");
-	filter: blur(4px);
-	-webkit-filter: blur(4px);
-}
-
-.headfree:hover > #intro {
-	color: white;
-	opacity: 1;
-}
-
-.headfree:hover > #intro p{
-	color: white;
-	opacity: 1;
-}
-
-
-
-.tri-1{
-	clip-path: polygon(25% 0%, 0 0, 0 100%);
-	background-color: var(--clrB);
-	height: 75%;
-	position: absolute;
-	top: 0%;
-	float: left;
-	width: 100%;
-	opacity: 0.5;
-}
-
-.tri-2{
-	clip-path: polygon(25% 100%, 0 0, 0 100%);
-	background-color: var(--clr);
-	height: 75%;
-	position: absolute;
-	top: 25%;
-	float: left;
-	width: 100%;
-	opacity: 0.5;
-}
-
-.bottom-content{
-
-	color: white;
-}
-
-.large-icon{
-	color: var(--clrA);
-	font-size: 6em;
-	padding: 3vw;
-}
-
-.bottom-title{
-	position: absolute;
-	color: white;
-	right: 1em;
-	font-size: 3em;
-	padding: 3vw 10vw;
-	width: 70vw;
-	top: 60%;
-}
-
-.bottom-body{
-	color: white;
-	font-size: 2em;
-	padding: 3vw;
-	float: right;
-	width: 70vw;
-	background-color: var(--clr);
-}
-
-#homePage{
-	display: block;
-}
-
-#contactPage{
-	display: none;
-}
-
-#resumePage{
-	display: none;
-}
-
-#resumePage ul li{
-	margin-left: 1em;
-	list-style: none;
-}
 
 .navigation ul li a .dropdown{
 	opacity: 0;
@@ -460,3 +265,49 @@ body, html{
 }
 
 
+.container{
+	height: 70vh;
+	width: 100%;
+	background-color: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#section1 .one-sub1{
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 70%;
+}
+
+#section1 .one-sub2{
+	background-color: rgba(255, 255, 255, 0.4);
+	width: 30%;
+}
+
+#section1 div h1{
+	width: 40%;
+	height: 20%;
+	margin-top: 20%;
+	margin-left: 30%;
+	color: white;
+	font-size: 2em;
+	font-weight: bolder;
+}
+
+#section1 div h3{
+	color: white;
+	width: 80%;
+	margin-left: 20%;
+}
+
+#section1 .one-sub2 img{
+	margin-top: 50%;
+	margin-left: -30%;
+	width: 60%;
+	height: 40%;
+}
+
+#section2{
+	height: 90vh;
+	background-color: rgb(255,255,255,0.8);
+}

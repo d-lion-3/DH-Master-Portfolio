@@ -4,9 +4,11 @@ body {
   display: flex;
   margin-top: 50px;
   justify-content: center;
-  background-color: var(--clrB);
+  background-image: url("blackliquid.gif");
+	background-size: original;
+	background-repeat: repeat;
   font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-weight: bolder;
 
 }
 button {
@@ -24,7 +26,7 @@ button {
   padding: 10px;
   color: var(--clr);
   font-size: 26px;
-  
+	box-shadow: 1em 1em 1em black;
   display: flex;
   justify-content: space-between;
 }
@@ -32,6 +34,7 @@ button {
   background-color:var(--clrB);
   font-family: "Inter", sans-serif;
   font-weight: bold;
+	box-shadow: 1em 1em 1em black;
   border-radius: 0.5rem;
 }
 #header a {
@@ -40,9 +43,15 @@ button {
   font-weight: bold;
   font-size: 1rem;
   padding: 0.20rem;
+	background-color: black;
   border: 1px solid white;
   border-radius: 0.4rem;
+	box-shadow: 1em 1em 1em black;
   text-decoration: none;
+}
+.header div{
+	text-shadow: 1em 1em 1em black;
+	font-size: 3em;
 }
 #container {
   width: 770px;
