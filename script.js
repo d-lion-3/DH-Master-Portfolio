@@ -1,13 +1,13 @@
 //Icon colors when a tab is clicked + dropdown for settings
 
 homeCurrent = document.getElementById('home');
-//homePage = document.getElementById('homePage');
+homePage = document.getElementById('homePage');
 
 contactCurrent = document.getElementById('contact');
-//contactPage = document.getElementById('contactPage');
+contactPage = document.getElementById('contactPage');
 
 resumeCurrent = document.getElementById('resume');
-//resumePage = document.getElementById('resumePage');
+resumePage = document.getElementById('resumePage');
 
 personalCurrent = document.getElementById('personal');
 
@@ -21,6 +21,9 @@ musicDropdown = document.getElementById('skipdown');
 
 	
 function homeNow(){
+	homePage.style.display = "block";
+	contactPage.style.display = "none";
+	resumePage.style.display = "none";
 	
 	homeCurrent.style.color = "var(--clrA)";
 	contactCurrent.style.color = "#d35555";
@@ -30,9 +33,9 @@ function homeNow(){
 }
 
 function contactNow(){
-	//homePage.style.display = "none";
-	//contactPage.style.display = "block";
-	//resumePage.style.display = "none";
+	homePage.style.display = "none";
+	contactPage.style.display = "block";
+	resumePage.style.display = "none";
 	
 	homeCurrent.style.color = "var(--clr)";
 	contactCurrent.style.color = "var(--clrA)";
@@ -42,9 +45,9 @@ function contactNow(){
 }
 
 function resumeNow(){
-	//homePage.style.display = "none";
-	//contactPage.style.display = "block";
-	//resumePage.style.display = "none";
+	homePage.style.display = "none";
+	contactPage.style.display = "none";
+	resumePage.style.display = "block";
 	
 	homeCurrent.style.color = "var(--clr)";
 	contactCurrent.style.color = "var(--clr)";
@@ -264,23 +267,3 @@ document.getElementById("playButton").addEventListener("click", playSong);
 
 document.getElementById("nextButton").addEventListener("click", nextSong);
 document.getElementById("previousButton").addEventListener("click", previousSong);
-
-const currentPage = 1;
-
-function handleSweep(dist){
-	window.scrollTo(0, dist);
-}
-
-
-window.addEventListener("scroll", (e) => {
-	const scrolled = window.scrollY;
-	if (scrolled > 100 && currentPage = 1){
-		handleSweep(300);
-		currentPage = 2;
-		console.log(scrolled."you are on page 2")
-	}if(scrolled < -100 && currentPage = 2){
-		handleSweep(0);
-		currentPage = 1;
-		console.log(scrolled+"you are on page 1 again")
-	}
-});
