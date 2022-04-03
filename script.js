@@ -19,51 +19,6 @@ musicDropdown = document.getElementById('skipdown');
 
 
 
-	
-function homeNow(){
-	homePage.style.display = "block";
-	contactPage.style.display = "none";
-	resumePage.style.display = "none";
-	
-	homeCurrent.style.color = "var(--clrA)";
-	contactCurrent.style.color = "#d35555";
-	resumeCurrent.style.color = "#d35555";
-	personalCurrent.style.color = "#d35555";
-	settingsCurrent.style.color = "#d35555";
-}
-
-function contactNow(){
-	homePage.style.display = "none";
-	contactPage.style.display = "block";
-	resumePage.style.display = "none";
-	
-	homeCurrent.style.color = "var(--clr)";
-	contactCurrent.style.color = "var(--clrA)";
-	resumeCurrent.style.color = "var(--clr)";
-	personalCurrent.style.color = "var(--clr)";
-	settingsCurrent.style.color = "var(--clr)";
-}
-
-function resumeNow(){
-	homePage.style.display = "none";
-	contactPage.style.display = "none";
-	resumePage.style.display = "block";
-	
-	homeCurrent.style.color = "var(--clr)";
-	contactCurrent.style.color = "var(--clr)";
-	resumeCurrent.style.color = "var(--clrA)";
-	personalCurrent.style.color = "var(--clr)";
-	settingsCurrent.style.color = "var(--clr)";
-}
-
-function personalNow(){
-	homeCurrent.style.color = "var(--clr)";
-	contactCurrent.style.color = "var(--clr)";
-	resumeCurrent.style.color = "var(--clr)";
-	personalCurrent.style.color = "var(--clrA)";
-	settingsCurrent.style.color = "var(--clr)";
-}
-
 
 let dropCount = 1;
 dropdown = document.getElementById("dropdown");
@@ -108,6 +63,7 @@ function settingsIn(){
 }
 
 function fadeSettingsOut(){
+	settingsCurrent.style.color = "var(--clr)";
 	dropdown.style.opacity = 0;
 }
 
@@ -267,3 +223,78 @@ document.getElementById("playButton").addEventListener("click", playSong);
 
 document.getElementById("nextButton").addEventListener("click", nextSong);
 document.getElementById("previousButton").addEventListener("click", previousSong);
+
+window.scrollTo(0, 0);
+/*let currentPage = 1;
+console.log(currentPage)
+
+
+window.addEventListener('scroll', throttle(handleScroll, 1000));
+  
+function throttle(fn, wait) {
+	var time = Date.now();
+	return function() {
+	  if ((time + wait - Date.now()) < 0) {
+		fn();
+		time = Date.now();
+	  }
+	}
+  }
+  
+function handleScroll() {
+	if (this.oldScroll > this.scrollY){
+		currentPage--;
+		console.log("we going up")
+	}else{
+		currentPage++;
+		console.log("we going down")
+	}
+	this.oldScroll = this.scrollY;
+	if (currentPage === 2){
+		window.scrollTo(0, 400);
+		//currentPage = 2;
+		console.log(`you are on page 2`);
+	}if(currentPage === 3){
+		window.scrollTo(0, 800);
+		//currentPage = 3;
+		console.log(`you are on page 3`);
+	}
+}
+
+window.onscroll = function() {
+	// print "false" if direction is down and "true" if up
+	console.log(this.oldScroll > this.scrollY);
+	this.oldScroll = this.scrollY;
+  }*/
+
+window.addEventListener("scroll", () =>{
+	scrolled = window.scrollY;
+	console.log(scrolled)
+	if (scrolled > 80){
+		document.querySelector(".outline-head").style.opacity = '0.2';
+	}else{
+		document.querySelector(".outline-head").style.opacity = '1';
+
+	}
+});
+
+var triangle = document.getElementById("triangle");
+var length = triangle.getTotalLength();
+
+// The start position of the drawing
+triangle.style.strokeDasharray = length;
+
+// Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+triangle.style.strokeDashoffset = length;
+
+// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+window.addEventListener("scroll", myFunction);
+
+function myFunction() {
+var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+  var draw = length * scrollpercent;
+  
+  // Reverse the drawing (when scrolling upwards)
+  triangle.style.strokeDashoffset = length - draw;
+}

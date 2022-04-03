@@ -4,7 +4,7 @@ body {
   display: flex;
   margin-top: 50px;
   justify-content: center;
-  background-color: var(--clrB);
+  background: url('/assets/blackliquid.gif');
   font-family: "Inter", sans-serif;
   font-weight: 400;
 
@@ -12,8 +12,6 @@ body {
 button {
   width: 75px;
   cursor: pointer;
-  
-  border: 1px solid white;
   outline: none;
   padding: 5px;
   border-radius: 5px;
@@ -28,19 +26,34 @@ button {
   display: flex;
   justify-content: space-between;
 }
+
 #header button {
-  background-color:var(--clrB);
+  background-color: white;
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
 }
+
+#header button:hover{
+  background-color: var(--clr);
+  color: white;
+}
+
+#header a:hover{
+  background-color: var(--clr);
+  color: white;
+}
+
 #header a {
   color:var(--clr);
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2rem;
+  background-color: white;
   padding: 0.20rem;
-  border: 1px solid white;
+  border: none;
+  float: left;
+  margin-right: 10vw;
   border-radius: 0.4rem;
   text-decoration: none;
 }
@@ -154,4 +167,10 @@ button {
   height: 100vh;
   position: absolute;
   background-color: rgba(0,0,0,0.8);
+}
+
+div#monthDisplay{
+  color: var(--clr);
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px rgb(255, 255, 255);
 }
